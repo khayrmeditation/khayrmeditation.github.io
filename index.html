@@ -11,6 +11,7 @@
             --accent-color: #d8f3dc;
             --bg-color: #f8f9fa;
             --text-color: #333333;
+            --card-bg: #ffffff;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,30 +25,39 @@
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 70px 20px;
         }
         header h1 {
             font-size: 2.8rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         header p {
             font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
+            opacity: 0.95;
+            max-width: 700px;
             margin: 0 auto 30px auto;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
         .btn {
             display: inline-block;
             background-color: white;
             color: var(--primary-color);
-            padding: 12px 30px;
-            border-radius: 30px;
+            padding: 10px 22px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            transition: background 0.3s ease;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
         }
         .btn:hover {
             background-color: var(--accent-color);
+            transform: translateY(-2px);
         }
         .container {
             max-width: 900px;
@@ -55,47 +65,90 @@
             padding: 0 20px;
         }
         .card {
-            background: white;
+            background: var(--card-bg);
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             margin-bottom: 30px;
         }
         .card h2 {
             color: var(--primary-color);
             margin-top: 0;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 8px;
+        }
+        .content-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .content-list li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+        .content-list li::before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
         }
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             font-size: 0.9rem;
-            color: #777;
+            color: #666;
             border-top: 1px solid #eaeaea;
             margin-top: 60px;
         }
         footer a {
             color: var(--primary-color);
             text-decoration: none;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Khayr Meditation</h1>
-        <p>WELCOME TO KHAYR MEDITATION 🌟 Beautiful Quran Recitations, Spiritual Reflections, and Inner Peace.</p>
-        <a href="https://www.youtube.com/@khayrmeditation" class="btn" target="_blank">Visit YouTube Channel</a>
+        <h1>Khayr Meditation 🌟</h1>
+        <p>A serene journey through the beauty and wisdom of the Quran. Our mission is to promote peace, education, and mindfulness through high-quality visual recitations.</p>
+        
+        <div class="social-links">
+            <a href="https://www.youtube.com/@khayrmeditation" class="btn" target="_blank">YouTube</a>
+            <a href="https://tiktok.com/@khayrmeditation" class="btn" target="_blank">TikTok</a>
+            <a href="https://facebook.com/khayrmeditation" class="btn" target="_blank">Facebook</a>
+            <a href="https://instagram.com/khayrmeditation" class="btn" target="_blank">Instagram</a>
+            <a href="https://x.com/khayrmeditation" class="btn" target="_blank">X</a>
+            <a href="https://linktr.ee/khayrmeditation" class="btn" target="_blank">Linktree</a>
+        </div>
     </header>
 
     <div class="container">
         <div class="card">
-            <h2>About the Project</h2>
-            <p>Khayr Meditation shares soul-soothing Quran recitations, reminders, and peaceful moments from the Holy Quran featuring renowned reciters.</p>
+            <h2>📖 Our Content</h2>
+            <p>Each video is carefully assembled to enhance your spiritual reflection:</p>
+            <ul class="content-list">
+                <li><strong>AUDIO:</strong> Authentic recitations from Quran.com.</li>
+                <li><strong>VISUALS:</strong> Unique AI-generated imagery tailored to every verse.</li>
+                <li><strong>TEXT:</strong> Precise Arabic and English translations (Source: Quran.com).</li>
+            </ul>
         </div>
 
         <div class="card">
-            <h2>Legal & Links</h2>
-            <p>You can also check the official policies required for our automated integrations:</p>
+            <h2>⚖️ Copyright & Ethics</h2>
+            <ul class="content-list">
+                <li><strong>NON-PROFIT:</strong> This channel is NOT monetized. We request YouTube not to show ads.</li>
+                <li><strong>RIGHTS HOLDERS:</strong> Any automated revenue belongs to the original audio owners.</li>
+                <li><strong>TRANSPARENCY:</strong> If you are a copyright owner and want content removed, please email us. We will delete it immediately.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Legal & Developer Pages</h2>
+            <p>Links for application verification and developer policies:</p>
             <ul>
                 <li><a href="terms.html">Terms of Service</a></li>
                 <li><a href="privacy.html">Privacy Policy</a></li>
